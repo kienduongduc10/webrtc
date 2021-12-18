@@ -10,4 +10,4 @@ function playStream(idVideoTag, stream) {
 }
 
 openStream()
-.then(stream => playStream(localVideo, stream));
+.then(stream => playStream('localVideo' , stream));
