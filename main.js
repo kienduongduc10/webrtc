@@ -1,5 +1,5 @@
 function openStream() {
-    const config = {audio: true, video: true };
+    const config = {audio: false, video: true };
     return navigator.mediaDevices.getUserMedia(config);
 }
 
