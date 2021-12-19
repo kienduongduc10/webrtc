@@ -14,4 +14,5 @@ openStream()
 
 peer.on('open', function(id) {
   document.getElementById("my-peers").innerHTML = (''My peer ID is: ' + id');
+  console.log('My peer ID is: ' + id);
 });
