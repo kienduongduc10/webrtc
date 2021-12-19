@@ -12,7 +12,7 @@ function playStream(idVideoTag, stream) {
 openStream()
 .then(stream => playStream('localVideo', stream));
 
-var peer = new Peer();
+const peer = new Peer();
 
 peer.on('open', function(id) {
   console.log('My peer ID is: ' + id);
