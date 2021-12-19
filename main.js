@@ -1,5 +1,5 @@
 function openStream() {
-    const config = {audio: true, video: true };
+    const config = {audio: false, video: true };
     return navigator.mediaDevices.getUserMedia(config);
 }
 
@@ -15,6 +15,5 @@ openStream()
 const peer = new Peer();
 
 peer.on('open', function(id) {
-  console.log('My peer ID is: ' + id);
-  document.getElementById("local-peer-id").innerHTML = "My peer ID is: " + id;
+  document.getElementById("local-peer-id").innerHTML = "Peer ID của bạn là: " + id;
 });
