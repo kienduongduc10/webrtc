@@ -12,6 +12,6 @@ function playStream(idVideoTag, stream) {
 openStream()
 .then(stream => playStream('localVideo', stream));
 
-const peer = new Peer( key: 'tkv5g2acaree9udi' ); 
-
-peer.on('open', id => $('#my-peers').append(id))
+peer.on('open', function(id) {
+  getElementById(my-peers).innerHTML = (''My peer ID is: ' + id');
+});
