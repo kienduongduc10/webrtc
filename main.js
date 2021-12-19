@@ -12,6 +12,6 @@ function playStream(idVideoTag, stream) {
 openStream()
 .then(stream => playStream('localVideo', stream));
 
-var peer = new Peer(123); 
+var peer = new Peer(); 
 
 peer.on('open', id => $('#my-peers').append(id))
