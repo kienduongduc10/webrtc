@@ -23,9 +23,9 @@ $('#btnCall').click(() => {
   const id = $('#remoteId').val();
   openStream()
   .then(stream => {
-      playStream('localStream', stream);
+      playStream('localVideo', stream);
       const call = peer.call(id, stream);
-      call.on('stream', remoteStream => playStream('remoteStream', remoteStream));
+      call.on('stream', remoteStream => playStream('remoteVideo', remoteStream));
   });
 });
 
