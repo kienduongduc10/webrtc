@@ -15,7 +15,7 @@ function playStream(idVideoTag, stream) {
 const peer = new Peer();
 
 peer.on('open', function(id) {
-  document.getElementById("local-peer-id").innerHTML = "PeerID của bạn là: " + id;
+  document.getElementById("local-peer-id").innerHTML = id;
 });
 
 //Caller
