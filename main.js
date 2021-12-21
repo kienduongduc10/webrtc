@@ -1,3 +1,5 @@
+var servers = {'iceServers': [{'urls': 'stun:stun.services.mozilla.com'}, {'urls': 'stun:stun.l.google.com:19302'}, {'urls': 'turn:numb.viagenie.ca','credential': 'webrtc','username': 'websitebeaver@mail.com'}]};
+
 function openStream() {
     const config = {audio: true, video: true, };
     return navigator.mediaDevices.getUserMedia(config);
@@ -12,7 +14,7 @@ function playStream(idVideoTag, stream) {
 //openStream()
 //.then(stream => playStream('localVideo', stream));
 
-const peer = new Peer();
+const peer = new Peer(servers);
 
 peer.on('open', function(id) {
   document.getElementById("local-peer-id").innerHTML = id;
@@ -26,7 +28,7 @@ $('#btnCall').click(() => {
       playStream('localVideo', stream);
       const call = peer.call(id, stream);
       call.on('stream', remoteStream => playStream('remoteVideo', remoteStream));
-   });
+    });
 });
 
 //Callee
