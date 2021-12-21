@@ -1,5 +1,5 @@
 function openStream() {
-    const config = {audio: false, video: true };
+    const config = {audio: true, video: true, };
     return navigator.mediaDevices.getUserMedia(config);
 }
 
@@ -26,7 +26,7 @@ $('#btnCall').click(() => {
       playStream('localVideo', stream);
       const call = peer.call(id, stream);
       call.on('stream', remoteStream => playStream('remoteVideo', remoteStream));
-  });
+   });
 });
 
 //Callee

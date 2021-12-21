@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Live-Ki Call WebRTC</title>
     <script src="peerjs.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
     <style type="text/css">
+        body {
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
         video {
             background-color: #ddd;
             border-radius: 10px;
             margin: 10px 0px 0px 10px;
             width: 320px;
             height: 240px;
-    }
+        }
+        #remoteId {
+            width: 8cm;
+            height: 1cm;
+            border: 3px;
+        }
 </style>
 </head>
 <body>
     <div align="center">
-        <h3>LiveID của bạn là: <code id="local-peer-id">Đang tải...</code></h3>
-        <video id="localVideo" autoplay></video>
-        <video id="remoteVideo" autoplay></video>
+        <h3>Live-ID của bạn là: <code id="local-peer-id">Đang tải mã...</code></h3>
+        <video id="localVideo" autoplay muted>Đang chờ video...</video>
+        <video id="remoteVideo" autoplay>Đang chờ video...</video>
         <br>
         <br>
-        <input type="text" id="remoteId" placeholder="Điền LiveID người muốn gọi">
+        <input type="text" id="remoteId" placeholder="Hãy nhập Live-ID người muốn gọi">
         <button id="btnCall">Call</button>
     </div>
 </body>
