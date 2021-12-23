@@ -19,12 +19,12 @@ function playStream(idVideoTag, stream) {
 const peer = new Peer(servers);
 
 peer.on('open', function(id) {
-  document.getElementById("local-peer-id").innerHTML = id;
+  document.getElementById("kikilive-id").innerHTML = id;
 });
 
 //Caller
-$('#btnCall').click(() => {
-  const id = $('#remoteId').val();
+$('#btn btn-primary btn-lg').click(() => {
+  const id = $('remoteId').val();
   openStream()
   .then(stream => {
       playStream('localVideo', stream);
