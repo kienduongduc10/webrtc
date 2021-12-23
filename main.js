@@ -23,7 +23,7 @@ peer.on('open', function(id) {
 });
 
 //Caller
-$('#btn btn-primary btn-lg').click(() => {
+$('btn btn-primary btn-lg').click(() => {
   const id = $('remoteId').val();
   openStream()
   .then(stream => {
